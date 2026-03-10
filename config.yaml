@@ -24,3 +24,18 @@ batch_size: 8
 n_negative_sample: 100
 n_sample_eigsolve: 2000
 lr: 0.001
+
+
+multiview:
+  enabled: false
+  views_per_sample: 8
+  min_views: 2
+  feature_cache_dir: ./tmp/multiview_features
+  correspondence_min_confidence: 0.2
+
+track_a:
+  view_consistency_loss: 0.1
+
+track_b:
+  triplane_recon_loss: 1.0
+  geometry_loss: 0.1
